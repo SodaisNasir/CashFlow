@@ -110,7 +110,7 @@ function SettingScreen() {
     }
     return (
         <View style={{ display: 'flex', alignItems: "center" }}>
-            <Text>2 facture of Authentication :</Text>
+            <Text>Autenticazione a due fattori</Text>
             <View>
                 <TouchableOpacity onPress={set_email} style={{
                     backgroundColor: "green",
@@ -119,7 +119,7 @@ function SettingScreen() {
                     padding: 15,
                     alignItems: "center"
                 }}>
-                    <Text>Verification By Email</Text>
+                    <Text>Verifica con email</Text>
                 </TouchableOpacity>
             </View>
             <View>
@@ -130,7 +130,7 @@ function SettingScreen() {
                     padding: 15,
                     alignItems: "center"
                 }} onPress={set_totp}>
-                    <Text>Verification By Totp</Text>
+                    <Text>Verifica con Totp</Text>
                 </TouchableOpacity>
             </View>
             <View>
@@ -138,7 +138,7 @@ function SettingScreen() {
                 {viewEmail}
             </View>
             <View style={{ display: 'flex' }}>
-                <Text>Is Authentified</Text>
+                <Text>è autenticato</Text>
                 <Switch
                     trackColor={{ true: "#767577", false: "#81b0ff" }}
                     thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
@@ -146,7 +146,7 @@ function SettingScreen() {
                     onValueChange={toggleSwitch}
                     value={isEnabled}
                 />
-                <Text>Is NotAuthentified</Text>
+                <Text> non è autenticato</Text>
             </View>
         </View>
     )

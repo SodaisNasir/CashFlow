@@ -61,8 +61,8 @@ function DataTable() {
           .catch((err) => console.info(err));
       }
 
-  console.log(2 - 2 )
-
+ 
+  
   async function getDataSoldi() {
     const email = await AsyncStorage.getItem("email2");
     const token = await AsyncStorage.getItem("token");
@@ -85,6 +85,7 @@ function DataTable() {
       )
       .catch((err) => console.info(err));
   }
+  
   useEffect(() => {
     getDataSoldi();
     getDataBalances();
@@ -146,24 +147,29 @@ function DataTable() {
             </View>
           </View>
         
-         
         {Saldi.map((item , index) => {
             return (
                 <>
-                  <View style={styles.container}  key={index} >
-                 <View style={{ backgroundColor: "#f8f9fa", padding: 10 }}>  
-            <View
-              style={{ flexDirection: "row", justifyContent: "space-between" }} >
-              <Text>{item.descrizione}</Text>
-              <Text style={{color:"green"}}>{item.saldo}</Text>
-            </View>
+                  <View style={styles.container12}  key={index}   >
+                  <View
+              style={[{padding: 10,  paddingLeft: 14, backgroundColor: index == "1" ? '#ffff' : '#f8f9fa' }]}
+            >
+              <View
+                style={{
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Text>{item.descrizione}</Text>
+                  <Text style={{color:"green"}} >{item.saldo}</Text>
+              </View>
             </View>
             </View>
                 </>
             )
         } )}
         <View style={styles.container} >
-        <View style={{ backgroundColor: "#f8f9fa", padding: 10 }}>  
+        <View style={{ backgroundColor: "#ffff", padding: 10 }}>  
           <View
               style={{ flexDirection: "row", justifyContent: "space-between" }} >
               <Text>Totale</Text>
@@ -284,7 +290,7 @@ function DataTable() {
             </View>
           </View>
         </View>
-        <TouchableOpacity
+        {/* <TouchableOpacity
           style={{
             padding: 10,
             margin: 10,
@@ -296,13 +302,13 @@ function DataTable() {
           <View>
             <Text>Open Table Details</Text>
           </View>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
       <View>
-            <View>
+            {/* <View>
                 <Text style={{ padding: 10 }}>Data Visualization :</Text>
-            </View>
-            <View style={styles.container12}>
+            </View> */}
+            {/* <View style={styles.container12}>
                 <BarChart data={{
                     labels: ['2019', '2020'],
                     datasets: [
@@ -326,7 +332,7 @@ function DataTable() {
                         color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
                     }}
                 />
-            </View>
+            </View> */}
         </View>
     </ScrollView>
   );
@@ -334,9 +340,12 @@ function DataTable() {
 
 const styles = StyleSheet.create({
     container12: {
-        margin:5,
-        borderRadius:5,
-        backgroundColor:"white"
+      margin: 0,
+      padding: 5,
+      lineHeight: 5,
+      borderRadius: 5,
+      flexDirection: "column",
+  
     },
   container: {
     margin: 5,

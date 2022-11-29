@@ -21,7 +21,7 @@ function RootStackScreen() {
             <Stack.Screen name="validate" component={ValidateScreen} />
             <Stack.Screen name="verification" component={OtpScreen} />
             <Stack.Screen name="company" component={CompanySelectScreen} />
-            <Stack.Screen name="setting" component={SettingScreen} options={{
+            <Stack.Screen name="Settings" component={SettingScreen} options={{
                 headerShown: true, headerStyle: { backgroundColor: "#191970" }, headerTitleStyle: {
                     color: 'white',
                 },
@@ -35,7 +35,7 @@ function RootStackScreen() {
                 headerRight: () => (
                     <TouchableOpacity
                         onPress={() =>
-                            navigation.navigate('setting')
+                            navigation.navigate('Settings')
                         }
                     ><Icon
                             name='settings'

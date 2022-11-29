@@ -17,8 +17,8 @@ function DashboardScreen() {
             </View>
             <View>
                 <TouchableOpacity >
-                    <View style={{ backgroundColor: 'white', width: 80, padding: 10, margin: 10, flexDirection: 'row', borderRadius: 5 }}>
-                        <Text>Reload</Text>
+                    <View style={{ backgroundColor: 'white', width: 125, padding: 10, margin: 10, flexDirection: 'row', borderRadius: 5 }}>
+                        <Text>Aggiorna i dati</Text>
                         <AntDesign name='reload1' size={15} />
                     </View>
                 </TouchableOpacity>
