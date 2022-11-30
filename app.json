@@ -20,12 +20,14 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.ahmedomi.cashmustwebapp"
     },
+    
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.ahmedomi.cashmustwebapp"
+      "package": "com.ahmedomi.cashmustwebapp",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -33,7 +35,7 @@
     "description": "Cashflow mobile application for android and ios",
     "extra": {
       "eas": {
-        "projectId": "1e83edba-7ed5-4dd2-bcbb-f01c3e63dffb"
+        "projectId": "feb6b70d-dc40-46ff-a414-6338288e4280"
       }
     }
   }
